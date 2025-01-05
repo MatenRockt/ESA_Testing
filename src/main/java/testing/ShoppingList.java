@@ -32,5 +32,8 @@ public class ShoppingList {
         return new ArrayList<>(items);
     }
 
-    
+    // Verdoppelt alle Items in der Einkaufsliste
+    public void verdoppeleItems() {
+        
+    }
 }

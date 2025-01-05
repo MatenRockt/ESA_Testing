@@ -4,9 +4,16 @@ import org.junit.jupiter.api.Test;
 
 import testing.ShoppingList;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 class ShoppingListTest {
 
@@ -62,5 +69,13 @@ class ShoppingListTest {
         assertEquals(2, items.size(), "Die Einkaufsliste sollte 2 Items enthalten.");
         assertTrue(items.contains("Banane"), "Die Einkaufsliste sollte 'Banane' enthalten.");
         assertTrue(items.contains("Apfel"), "Die Einkaufsliste sollte 'Apfel' enthalten.");
+    }
+       @Test
+    void testVerdoppeleItemsMock() {
+        // Erstelle ein Mock-Objekt der ShoppingList
+        ShoppingList mockShoppingList = mock(ShoppingList.class);
+           
+        // Rufe die Methode auf
+        mockShoppingList.verdoppeleItems();
     }
 }
